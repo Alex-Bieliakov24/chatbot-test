@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Тестовый сайт с чат-ботом</title>
+
+  <!-- Стили для чата -->
+  <link
+    rel="stylesheet"
+    href="https://chatbot.gitcommitt.com/assets/widget/style.css"
+  />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #2c3e50;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Добро пожаловать! Это чат-бот</h1>
+
+  <!-- Подключение скриптов -->
+  <script type="module" src="./main.js"></script>
+  <script src="https://chatbot.gitcommitt.com/assets/widget/loader-snippet.js"></script>
+  <script>
+    const scriptElement = document.createElement("script");
+    scriptElement.src = `https://chatbot.gitcommitt.com/assets/widget/chat-widget.umd.js?v=${Math.floor(
+      Math.random() * 10000000
+    )}`;
+    document.body.appendChild(scriptElement);
+  </script>
+
+</body>
+</html>
